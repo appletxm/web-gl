@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="expires" content="0"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>Test and Learn Web GL</title>
+  <link rel="icon" href="./assets/images/logo.ico" type="image/png">
+</head>
+
+<body>
+  <canvas id="glCanvas" width="640" height="480"></canvas>
+
+  <script src="./libs/traceur.js"></script>
+  <script src="./libs/BrowserSystem.js"></script>
+  <script src="./libs/three.min.js"></script>
+
+  <script type="module">
+    import gl from './src/gl.js'
+    // gl.init('#glCanvas')
+    // gl.drawCustom()
+    import three from './src/gl-three.js'
+    three.start()
+  </script>
+</body>
+
+</html>

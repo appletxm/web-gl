@@ -1,0 +1,52 @@
+{
+  "name": "web-gl",
+  "version": "0.0.1",
+  "private": false,
+  "scripts": {
+    "eslint": "eslint --config .eslintrc.js src/js/**/*.js",
+    "start": "concurrently --kill-others \"npm run babel-watch\" \"npm run server\"",
+    "dev": "concurrently --kill-others \"npm run babel-watch\" \"npm run server\"",
+    "debug": "concurrently --kill-others \"npm run babel-watch\" \"node --inspect scripts/server.js\"",
+    "babel": "babel src --out-dir dist --source-maps inline",
+    "babel-watch": "babel src --out-dir dist --watch",
+    "server": "node scripts/server.js"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-standalone": "^6.26.0",
+    "express": "4.16.3",
+    "formidable": "^1.2.1",
+    "log4js": "^3.0.5",
+    "three": "^0.103.0"
+  },
+  "devDependencies": {
+    "chalk": "2.3.0",
+    "concurrently": "^3.5.1",
+    "event-source-polyfill": "0.0.12",
+    "open": "0.0.5",
+    "ora": "1.3.0",
+    "rimraf": "2.6.2",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.5",
+    "babel-plugin-transform-runtime": "6.23.0",
+    "babel-preset-env": "1.6.1"
+  },
+  "nodejs": {
+    "version": ">=8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/appletxm/web-gl"
+  },
+  "keywords": [
+    "canvas",
+    "WEB GL"
+  ],
+  "author": "appletxm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/appletxm/web-gl/issues"
+  }
+}
